@@ -1,0 +1,121 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: "Ubuntu", Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    background-color: rgb(230, 230, 230);
+    color: black;
+}
+
+.title {
+    padding: 10px 0 10px 10px;
+    background-color: rgb(200, 200, 200);
+    border-bottom: 1px solid rgb(150, 150, 150);
+    margin-bottom: 20px;
+}
+
+.title .name {
+    font-size: 3em;
+    color: #5996EB;
+    font-weight: bold;
+    text-shadow: 0 0 1px, 0 0 1px black, 0 0 3px black, 3px 3px 5px black;
+}
+
+.title .intro {
+    font-style: italic;
+    margin-top: 10px;
+    font-size: 1.2em;
+    text-shadow: 0 0 1px;
+}
+
+.pad-left-15px {
+    padding-left: 15px;
+}
+
+.pad-right-15px {
+    padding-right: 15px;
+}
+
+.overview {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.spacer {
+    padding-top: 25px;
+}
+
+.spacer-sm {
+    padding-top: 10px;
+}
+
+.spacer-lg {
+    padding-top: 50px;
+}
+
+.body-content {
+    padding-top: 30px;
+    padding-bottom: 60px;
+    /*Account for footer*/
+}
+
+.list-item {
+    padding: 3px 0 3px 10px;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+#tbUrl {
+    width: 300px;
+}
+
+#displayBox {
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    min-height: 150px;
+    padding: 2px;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.footer {
+    border-top: 1px solid rgb(150, 150, 150);
+    padding: 10px 0 10px 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(200, 200, 200);
+    font-size: 1.2em;
+    text-shadow: 0 0 .2px;
+}
+
+.hljs {
+    background-color: white;
+    border: 1px solid rgb(150, 150, 150);
+    border-left: none;
+    border-right: none;
+    color: black;
+}
+
+.hljs-keyword {
+    color: blue;
+}
+
+.hljs-built_in {
+    color: #A500B8;
+}
+
+.hljs-comment {
+    color: green;
+}

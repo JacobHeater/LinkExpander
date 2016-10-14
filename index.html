@@ -1,0 +1,121 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>Link Inflater</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="./styles/index.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="title">
+        <div class="name">
+            Link Inflater
+        </div>
+        <div class="intro">
+            A super simple, <span class="bold upper">free</span>, open-source REST API for expanding shortened URLs.
+        </div>
+    </div>
+
+    <div class="body-content">
+        <div class="live-example pad-left-15px">
+            <div class="overview">
+                See the API in Action!
+            </div>
+            <div class="spacer-lg">
+            </div>
+            <div class="action">
+                <div>
+                    <span>Enter a URL to Inflate</span>
+                </div>
+                <div class="spacer"></div>
+                <input type="text" placeholder="Enter your shortened URL..." id="tbUrl" value="https://youtu.be/Kfpnwk-DXrA" />
+                <input type="button" value="Inflate!" id="btnInflate" title="Inflate URL" />
+                <div class="spacer"></div>
+                <div>
+                    <span>Result</span> &nbsp;
+                    <input type="button" value="clear" id="btnClear" title="Clear results..." />
+                </div>
+                <div class="spacer-sm"></div>
+                <div class="output">
+                    <div class="pad-right-15px">
+                        <div id="displayBox">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="spacer"></div>
+        <div class="instructions">
+            <div class="overview pad-left-15px">
+                How to Use the REST API
+            </div>
+            <div class="usage-example">
+                <!-- Need highlighting here... -->
+                <pre>
+                    <code class="javascript">
+    //jQuery AJAX
+    $.get("https://linkinflater.herokuapp.com/api/inflate?url=https://youtu.be/Kfpnwk-DXrA")
+    .done(function(repsonse) {
+        if (response.success) {
+            //Everything went through without any hiccups.
+            var inflatedUrl = response.data.inflatedUrl;
+            //Do something with inflatedUrl
+        } else {
+            //Whoops! Something went wrong!
+            console.error(repsonse.data);
+        }
+    })
+    .fail(function(xhr) {
+        //XmlHttpRequest error.
+        console.error(xhr);
+    });
+                    </code>
+                </pre>
+            </div>
+        </div>
+
+        <div class="specs pad-left-15px">
+            <div class="overview">
+                What Drives this API?
+            </div>
+            <div class="spacer-sm"></div>
+            <div class="list-item">
+                Node.js
+            </div>
+            <div class="list-item">
+                ExpressJS
+            </div>
+            <div class="list-item">
+                <a href="https://www.npmjs.com/package/expand-url" target="_blank">expand-url</a> Node package
+            </div>
+            <div class="list-item">
+                Heroku
+            </div>
+            <div class="list-item">
+                GitHub
+            </div>
+            <div class="spacer-sm"></div>
+            <div>
+                Be sure to check out the source code on GitHub, and feel free to contribute!
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        Link Inflater &nbsp; &copy; Jacob Heater &nbsp; 2016 &nbsp;&mdash;&nbsp;
+        <a href="https://github.com/jacobheater/linkexpander" target="_blank">Source Code</a>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="./scripts/index.js"></script>
+</body>
+
+</html>
