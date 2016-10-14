@@ -26,7 +26,6 @@ html {
     font-style: italic;
     margin-top: 10px;
     font-size: 1.2em;
-    text-shadow: 0 0 1px;
 }
 
 .pad-left-15px {
@@ -97,7 +96,6 @@ html {
     width: 100%;
     background-color: rgb(200, 200, 200);
     font-size: 1.2em;
-    text-shadow: 0 0 .2px;
 }
 
 .hljs {
