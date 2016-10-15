@@ -8,7 +8,11 @@
     var express = require("express");
     var app = express();
 
-    var staticResources = ["/scripts", "/styles"];
+    var staticResources = [
+        "/scripts",
+        "/styles",
+        "/resources"
+    ];
 
     //Enable CORS requests for our service!
     //Thanks to http://enable-cors.org/server_expressjs.html for this great assist!

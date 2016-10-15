@@ -16,8 +16,12 @@
 
     <div class="title">
         <div class="name">
-            Link Inflater
+            <a href="./" title="Link Inflater">
+                Link Inflater 
+                <img src="./resources/images/icon.png" title="Link Inflater" alt="Link Inflater" class="icon" />
+            </a>
         </div>
+
         <div class="intro">
             A super simple, <span class="bold upper">free</span>, open-source REST API for expanding shortened URLs.
         </div>
@@ -32,32 +36,25 @@
             </div>
             <div class="action">
                 <div>
-                    <span>Enter a URL to Inflate</span>
+                    <label for="tbUrl">Enter a URL to Inflate</label>
                 </div>
-                <div class="spacer"></div>
                 <input type="text" placeholder="Enter your shortened URL..." id="tbUrl" value="https://youtu.be/Kfpnwk-DXrA" />
                 <input type="button" value="Inflate!" id="btnInflate" title="Inflate URL" />
+                <input type="button" value="Clear" id="btnClearUrl" class="clear" title="Clear the URL text input" />
                 <div class="spacer"></div>
-                <div>
-                    <span>Result</span> &nbsp;
-                    <input type="button" value="clear" id="btnClear" title="Clear results..." />
-                </div>
-                <div class="spacer-sm"></div>
-                <div class="output">
-                    <div class="pad-right-15px">
-                        <div id="displayBox">
-                        </div>
-                    </div>
-                </div>
+                <label for="tbResult">Result</label>
+                <br />
+                <input type="text" placeholder="Result will be here" id="tbResult" disabled />
+                <input type="button" value="Copy" id="btnCopy" title="Copy inflated URL" />
+                <input type="button" value="Clear" id="btnClearOutput" class="clear" title="Clear the output" />
             </div>
         </div>
-        <div class="spacer"></div>
+        <div class="spacer-lg"></div>
         <div class="instructions">
             <div class="overview pad-left-15px">
                 How to Use the REST API
             </div>
             <div class="usage-example">
-                <!-- Need highlighting here... -->
                 <pre>
                     <code class="javascript">
     //jQuery AJAX
@@ -76,47 +73,61 @@
         //XmlHttpRequest error.
         console.error(xhr);
     });
+
+    //Sample Successful JSON response
+    {
+        "success": true,
+        "data": {
+            "requestedUrl": "https://youtu.be/Kfpnwk-DXrA",
+            "inflatedUrl": "https://www.youtube.com/watch?v=Kfpnwk-DXrA&feature=youtu.be"
+        }
+    }
+
+    //Sample Failure JSON response
+    {
+        "success": false,
+        "data": "Error message will be here..."
+    }
                     </code>
                 </pre>
             </div>
+
+            <div class="specs pad-left-15px">
+                <div class="overview">
+                    What Drives this API?
+                </div>
+                <div class="spacer-sm"></div>
+                <div class="list-item">
+                    Node.js
+                </div>
+                <div class="list-item">
+                    ExpressJS
+                </div>
+                <div class="list-item">
+                    <a href="https://www.npmjs.com/package/expand-url" target="_blank">expand-url</a> Node package
+                </div>
+                <div class="list-item">
+                    Heroku
+                </div>
+                <div class="list-item">
+                    GitHub
+                </div>
+                <div class="spacer-sm"></div>
+                <div>
+                    Be sure to check out the source code on GitHub, and feel free to contribute!
+                </div>
+            </div>
         </div>
 
-        <div class="specs pad-left-15px">
-            <div class="overview">
-                What Drives this API?
-            </div>
-            <div class="spacer-sm"></div>
-            <div class="list-item">
-                Node.js
-            </div>
-            <div class="list-item">
-                ExpressJS
-            </div>
-            <div class="list-item">
-                <a href="https://www.npmjs.com/package/expand-url" target="_blank">expand-url</a> Node package
-            </div>
-            <div class="list-item">
-                Heroku
-            </div>
-            <div class="list-item">
-                GitHub
-            </div>
-            <div class="spacer-sm"></div>
-            <div>
-                Be sure to check out the source code on GitHub, and feel free to contribute!
-            </div>
+        <div class="footer">
+            Link Inflater &nbsp; &copy; Jacob Heater &nbsp; 2016 &nbsp;&mdash;&nbsp;
+            <a href="https://github.com/jacobheater/linkexpander" target="_blank">Source Code</a>
         </div>
-    </div>
 
-    <div class="footer">
-        Link Inflater &nbsp; &copy; Jacob Heater &nbsp; 2016 &nbsp;&mdash;&nbsp;
-        <a href="https://github.com/jacobheater/linkexpander" target="_blank">Source Code</a>
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
-    <script src="./scripts/index.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+        <script src="./scripts/index.js"></script>
 </body>
 
 </html>

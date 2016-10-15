@@ -20,6 +20,17 @@ html {
     color: #5996EB;
     font-weight: bold;
     text-shadow: 0 0 1px, 0 0 1px black, 0 0 3px black, 3px 3px 5px black;
+    display: inline-block;
+}
+
+.title .name a {
+    color: #5996EB;
+    text-decoration: none;
+}
+
+.title .icon {
+    width: 50px;
+    padding-left: 15px;
 }
 
 .title .intro {
@@ -75,6 +86,11 @@ html {
 
 #tbUrl {
     width: 300px;
+}
+
+#tbResult {
+    width: 400px;
+    padding: 3px;
 }
 
 #displayBox {
